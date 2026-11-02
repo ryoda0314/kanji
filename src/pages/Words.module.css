@@ -1,0 +1,20 @@
+.toolRow { display: flex; flex-direction: column; gap: 10px; padding-bottom: 12px; border-bottom: 1px solid var(--line); }
+.sort { align-self: flex-start; }
+.sort > button { padding: 0 16px; font-size: 13px; min-height: 36px; }
+.groups { display: flex; flex-direction: column; gap: 4px; }
+.lead { font-size: 17px; color: var(--ink); font-weight: 600; }
+
+.empty { display: flex; flex-direction: column; align-items: center; gap: 12px; padding: 32px 8px; text-align: center; }
+.empty p { margin: 0; font-size: 14px; line-height: 1.8; color: var(--muted); max-width: 22em; }
+.sprout { width: 160px; }
+
+@media (min-width: 720px) {
+  .toolRow { flex-direction: row; align-items: center; justify-content: space-between; }
+  .sort { align-self: auto; flex-shrink: 0; }
+}
+
+/* ふりかえりどきの語 */
+.due { gap: 8px; }
+.dueTitle { margin: 0; font-size: 16px; font-weight: 600; }
+.dueStart { align-self: flex-start; margin-top: 6px; }
+.footnote { margin: 16px 0 0; font-size: 12px; line-height: 1.7; color: var(--faint); }

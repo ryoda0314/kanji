@@ -1,0 +1,35 @@
+{
+  "name": "kotonohashi",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "韓国語の漢字語を、そのまま日本語の語に（ことのね・글씨앗 の姉妹）",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc -b --noEmit",
+    "build:data": "node scripts/build-data.mjs",
+    "build:sentences": "node scripts/build-sentences.mjs"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.117.2",
+    "dexie": "^4.0.11",
+    "dexie-react-hooks": "^1.1.7",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-router-dom": "^7.1.5"
+  },
+  "devDependencies": {
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.0",
+    "@vitejs/plugin-react": "^4.3.4",
+    "kuromoji": "^0.1.2",
+    "typescript": "^5.7.3",
+    "vite": "^6.1.0",
+    "vite-plugin-pwa": "^1.3.0",
+    "vitest": "^3.0.5"
+  }
+}

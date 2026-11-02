@@ -1,0 +1,943 @@
+[
+ {
+  "char": "学",
+  "ko": "學",
+  "sounds": [
+   {
+    "hun": "배울",
+    "eum": "학"
+   }
+  ],
+  "on": [
+   "ガク"
+  ],
+  "kun": [
+   "まな.ぶ"
+  ],
+  "meaning": "study, learning, science",
+  "strokes": 8,
+  "grade": 1,
+  "joyo": true,
+  "n": 5,
+  "edu": true
+ },
+ {
+  "char": "生",
+  "sounds": [
+   {
+    "hun": "날",
+    "eum": "생"
+   }
+  ],
+  "on": [
+   "セイ",
+   "ショウ"
+  ],
+  "kun": [
+   "い.きる",
+   "い.かす",
+   "い.ける",
+   "なま",
+   "なま-",
+   "う.まれる",
+   "は.える",
+   "き",
+   "な.る"
+  ],
+  "meaning": "life, genuine, birth",
+  "strokes": 5,
+  "grade": 1,
+  "joyo": true,
+  "n": 5,
+  "edu": true
+ },
+ {
+  "char": "大",
+  "sounds": [
+   {
+    "hun": "큰",
+    "eum": "대"
+   }
+  ],
+  "on": [
+   "ダイ",
+   "タイ"
+  ],
+  "kun": [
+   "おお-",
+   "おお.きい",
+   "-おお.いに"
+  ],
+  "meaning": "large, big",
+  "strokes": 3,
+  "grade": 1,
+  "joyo": true,
+  "n": 5,
+  "edu": true
+ },
+ {
+  "char": "校",
+  "sounds": [
+   {
+    "hun": "학교",
+    "eum": "교"
+   }
+  ],
+  "on": [
+   "コウ",
+   "キョウ"
+  ],
+  "meaning": "exam, school, printing",
+  "strokes": 10,
+  "grade": 1,
+  "joyo": true,
+  "n": 5,
+  "edu": true
+ },
+ {
+  "char": "先",
+  "sounds": [
+   {
+    "hun": "먼저",
+    "eum": "선"
+   }
+  ],
+  "on": [
+   "セン"
+  ],
+  "kun": [
+   "さき",
+   "ま.ず"
+  ],
+  "meaning": "before, ahead, previous",
+  "strokes": 6,
+  "grade": 1,
+  "joyo": true,
+  "n": 5,
+  "edu": true
+ },
+ {
+  "char": "活",
+  "sounds": [
+   {
+    "hun": "살",
+    "eum": "활"
+   }
+  ],
+  "on": [
+   "カツ"
+  ],
+  "kun": [
+   "い.きる",
+   "い.かす",
+   "い.ける"
+  ],
+  "meaning": "lively, resuscitation, being helped",
+  "strokes": 9,
+  "grade": 2,
+  "joyo": true,
+  "n": 3,
+  "edu": true
+ },
+ {
+  "char": "一",
+  "sounds": [
+   {
+    "hun": "한",
+    "eum": "일"
+   }
+  ],
+  "on": [
+   "イチ",
+   "イツ"
+  ],
+  "kun": [
+   "ひと-",
+   "ひと.つ"
+  ],
+  "meaning": "one, one radical (no.1)",
+  "strokes": 1,
+  "grade": 1,
+  "joyo": true,
+  "n": 5,
+  "edu": true
+ },
+ {
+  "char": "会",
+  "ko": "會",
+  "sounds": [
+   {
+    "hun": "모일",
+    "eum": "회"
+   }
+  ],
+  "on": [
+   "カイ",
+   "エ"
+  ],
+  "kun": [
+   "あ.う",
+   "あ.わせる",
+   "あつ.まる"
+  ],
+  "meaning": "meeting, meet, party",
+  "strokes": 6,
+  "grade": 2,
+  "joyo": true,
+  "n": 4,
+  "edu": true
+ },
+ {
+  "char": "社",
+  "sounds": [
+   {
+    "hun": "모일",
+    "eum": "사"
+   }
+  ],
+  "on": [
+   "シャ"
+  ],
+  "kun": [
+   "やしろ"
+  ],
+  "meaning": "company, firm, office",
+  "strokes": 7,
+  "grade": 2,
+  "joyo": true,
+  "n": 4,
+  "edu": true
+ },
+ {
+  "char": "員",
+  "sounds": [
+   {
+    "hun": "인원",
+    "eum": "원"
+   }
+  ],
+  "on": [
+   "イン"
+  ],
+  "meaning": "employee, member, number",
+  "strokes": 10,
+  "grade": 3,
+  "joyo": true,
+  "n": 4,
+  "edu": true
+ },
+ {
+  "char": "時",
+  "sounds": [
+   {
+    "hun": "때",
+    "eum": "시"
+   }
+  ],
+  "on": [
+   "ジ"
+  ],
+  "kun": [
+   "とき",
+   "-どき"
+  ],
+  "meaning": "time, hour",
+  "strokes": 10,
+  "grade": 2,
+  "joyo": true,
+  "n": 5,
+  "edu": true
+ },
+ {
+  "char": "間",
+  "sounds": [
+   {
+    "hun": "사이",
+    "eum": "간"
+   }
+  ],
+  "on": [
+   "カン",
+   "ケン"
+  ],
+  "kun": [
+   "ま",
+   "あいだ",
+   "あい"
+  ],
+  "meaning": "interval, space",
+  "strokes": 12,
+  "grade": 2,
+  "joyo": true,
+  "n": 5,
+  "edu": true
+ },
+ {
+  "char": "勉",
+  "sounds": [
+   {
+    "hun": "힘쓸",
+    "eum": "면"
+   }
+  ],
+  "on": [
+   "ベン"
+  ],
+  "kun": [
+   "つと.める"
+  ],
+  "meaning": "exertion, endeavour, encourage",
+  "strokes": 10,
+  "grade": 3,
+  "joyo": true,
+  "n": 4,
+  "edu": true
+ },
+ {
+  "char": "強",
+  "ko": "强",
+  "sounds": [
+   {
+    "hun": "강할",
+    "eum": "강"
+   }
+  ],
+  "on": [
+   "キョウ",
+   "ゴウ"
+  ],
+  "kun": [
+   "つよ.い",
+   "つよ.まる",
+   "つよ.める",
+   "し.いる",
+   "こわ.い"
+  ],
+  "meaning": "strong",
+  "strokes": 11,
+  "grade": 2,
+  "joyo": true,
+  "n": 4,
+  "edu": true
+ },
+ {
+  "char": "約",
+  "sounds": [
+   {
+    "hun": "맺을",
+    "eum": "약"
+   }
+  ],
+  "on": [
+   "ヤク"
+  ],
+  "kun": [
+   "つづ.まる",
+   "つづ.める",
+   "つづま.やか"
+  ],
+  "meaning": "promise, approximately, shrink",
+  "strokes": 9,
+  "grade": 4,
+  "joyo": true,
+  "n": 3,
+  "edu": true
+ },
+ {
+  "char": "束",
+  "sounds": [
+   {
+    "hun": "묶을",
+    "eum": "속"
+   }
+  ],
+  "on": [
+   "ソク"
+  ],
+  "kun": [
+   "たば",
+   "たば.ねる",
+   "つか",
+   "つか.ねる"
+  ],
+  "meaning": "bundle, sheaf, ream",
+  "strokes": 7,
+  "grade": 4,
+  "joyo": true,
+  "n": 3,
+  "edu": true
+ },
+ {
+  "char": "写",
+  "ko": "寫",
+  "sounds": [
+   {
+    "hun": "베낄",
+    "eum": "사"
+   }
+  ],
+  "on": [
+   "シャ",
+   "ジャ"
+  ],
+  "kun": [
+   "うつ.す",
+   "うつ.る",
+   "うつ-",
+   "うつ.し"
+  ],
+  "meaning": "copy, be photographed, describe",
+  "strokes": 5,
+  "grade": 3,
+  "joyo": true,
+  "n": 4,
+  "edu": true
+ },
+ {
+  "char": "真",
+  "ko": "眞",
+  "sounds": [
+   {
+    "hun": "참",
+    "eum": "진"
+   }
+  ],
+  "on": [
+   "シン"
+  ],
+  "kun": [
+   "ま",
+   "ま-",
+   "まこと"
+  ],
+  "meaning": "true, reality, Buddhist sect",
+  "strokes": 10,
+  "grade": 3,
+  "joyo": true,
+  "n": 4,
+  "edu": true
+ },
+ {
+  "char": "友",
+  "sounds": [
+   {
+    "hun": "벗",
+    "eum": "우"
+   }
+  ],
+  "on": [
+   "ユウ"
+  ],
+  "kun": [
+   "とも"
+  ],
+  "meaning": "friend",
+  "strokes": 4,
+  "grade": 2,
+  "joyo": true,
+  "n": 5,
+  "edu": true
+ },
+ {
+  "char": "達",
+  "sounds": [
+   {
+    "hun": "통달할",
+    "eum": "달"
+   }
+  ],
+  "on": [
+   "タツ",
+   "ダ"
+  ],
+  "kun": [
+   "-たち"
+  ],
+  "meaning": "accomplished, reach, arrive",
+  "strokes": 12,
+  "grade": 4,
+  "joyo": true,
+  "n": 3,
+  "edu": true
+ },
+ {
+  "char": "食",
+  "sounds": [
+   {
+    "hun": "밥",
+    "eum": "식"
+   }
+  ],
+  "on": [
+   "ショク",
+   "ジキ"
+  ],
+  "kun": [
+   "く.う",
+   "く.らう",
+   "た.べる",
+   "は.む"
+  ],
+  "meaning": "eat, food",
+  "strokes": 9,
+  "grade": 2,
+  "joyo": true,
+  "n": 5,
+  "edu": true
+ },
+ {
+  "char": "物",
+  "sounds": [
+   {
+    "hun": "물건",
+    "eum": "물"
+   }
+  ],
+  "on": [
+   "ブツ",
+   "モツ"
+  ],
+  "kun": [
+   "もの",
+   "もの-"
+  ],
+  "meaning": "thing, object, matter",
+  "strokes": 8,
+  "grade": 3,
+  "joyo": true,
+  "n": 4,
+  "edu": true
+ },
+ {
+  "char": "今",
+  "sounds": [
+   {
+    "hun": "이제",
+    "eum": "금"
+   }
+  ],
+  "on": [
+   "コン",
+   "キン"
+  ],
+  "kun": [
+   "いま"
+  ],
+  "meaning": "now",
+  "strokes": 4,
+  "grade": 2,
+  "joyo": true,
+  "n": 5,
+  "edu": true
+ },
+ {
+  "char": "日",
+  "sounds": [
+   {
+    "hun": "날",
+    "eum": "일"
+   }
+  ],
+  "on": [
+   "ニチ",
+   "ジツ"
+  ],
+  "kun": [
+   "ひ",
+   "-び",
+   "-か"
+  ],
+  "meaning": "day, sun, Japan",
+  "strokes": 4,
+  "grade": 1,
+  "joyo": true,
+  "n": 5,
+  "edu": true
+ },
+ {
+  "char": "発",
+  "ko": "發",
+  "sounds": [
+   {
+    "hun": "쏠",
+    "eum": "발"
+   }
+  ],
+  "on": [
+   "ハツ",
+   "ホツ"
+  ],
+  "kun": [
+   "た.つ",
+   "あば.く",
+   "おこ.る",
+   "つか.わす",
+   "はな.つ"
+  ],
+  "meaning": "departure, discharge, publish",
+  "strokes": 9,
+  "grade": 3,
+  "joyo": true,
+  "n": 4,
+  "edu": true
+ },
+ {
+  "char": "表",
+  "sounds": [
+   {
+    "hun": "겉",
+    "eum": "표"
+   }
+  ],
+  "on": [
+   "ヒョウ"
+  ],
+  "kun": [
+   "おもて",
+   "-おもて",
+   "あらわ.す",
+   "あらわ.れる",
+   "あら.わす"
+  ],
+  "meaning": "surface, table, chart",
+  "strokes": 8,
+  "grade": 3,
+  "joyo": true,
+  "n": 3,
+  "edu": true
+ },
+ {
+  "char": "出",
+  "sounds": [
+   {
+    "hun": "날",
+    "eum": "출"
+   }
+  ],
+  "on": [
+   "シュツ",
+   "スイ"
+  ],
+  "kun": [
+   "だ.す",
+   "-だ.す",
+   "で.る",
+   "-で",
+   "い.でる"
+  ],
+  "meaning": "exit, leave, go out",
+  "strokes": 5,
+  "grade": 1,
+  "joyo": true,
+  "n": 5,
+  "edu": true
+ },
+ {
+  "char": "工",
+  "sounds": [
+   {
+    "hun": "장인",
+    "eum": "공"
+   }
+  ],
+  "on": [
+   "コウ",
+   "ク",
+   "グ"
+  ],
+  "meaning": "craft, construction, katakana e radical (no. 48)",
+  "strokes": 3,
+  "grade": 2,
+  "joyo": true,
+  "n": 4,
+  "edu": true
+ },
+ {
+  "char": "夫",
+  "sounds": [
+   {
+    "hun": "지아비",
+    "eum": "부"
+   }
+  ],
+  "on": [
+   "フ",
+   "フウ",
+   "ブ"
+  ],
+  "kun": [
+   "おっと",
+   "それ"
+  ],
+  "meaning": "husband, man",
+  "strokes": 4,
+  "grade": 4,
+  "joyo": true,
+  "n": 3,
+  "edu": true
+ },
+ {
+  "char": "丈",
+  "sounds": [
+   {
+    "hun": "어른",
+    "eum": "장"
+   }
+  ],
+  "on": [
+   "ジョウ"
+  ],
+  "kun": [
+   "たけ",
+   "だけ"
+  ],
+  "meaning": "length, ten shaku, measure",
+  "strokes": 3,
+  "grade": 8,
+  "joyo": true,
+  "edu": true
+ },
+ {
+  "char": "年",
+  "sounds": [
+   {
+    "hun": "해",
+    "eum": "년"
+   },
+   {
+    "eum": "연"
+   }
+  ],
+  "on": [
+   "ネン"
+  ],
+  "kun": [
+   "とし"
+  ],
+  "meaning": "year, counter for years",
+  "strokes": 6,
+  "grade": 1,
+  "joyo": true,
+  "n": 5,
+  "edu": true
+ },
+ {
+  "char": "人",
+  "sounds": [
+   {
+    "hun": "사람",
+    "eum": "인"
+   }
+  ],
+  "on": [
+   "ジン",
+   "ニン"
+  ],
+  "kun": [
+   "ひと",
+   "-と",
+   "-り"
+  ],
+  "meaning": "person",
+  "strokes": 2,
+  "grade": 1,
+  "joyo": true,
+  "n": 5,
+  "edu": true
+ },
+ {
+  "char": "徒",
+  "sounds": [
+   {
+    "hun": "무리",
+    "eum": "도"
+   }
+  ],
+  "on": [
+   "ト"
+  ],
+  "kun": [
+   "いたずら",
+   "あだ"
+  ],
+  "meaning": "on foot, junior, emptiness",
+  "strokes": 10,
+  "grade": 4,
+  "joyo": true,
+  "n": 3,
+  "edu": true
+ },
+ {
+  "char": "山",
+  "sounds": [
+   {
+    "hun": "메",
+    "eum": "산"
+   }
+  ],
+  "on": [
+   "サン",
+   "セン"
+  ],
+  "kun": [
+   "やま"
+  ],
+  "meaning": "mountain",
+  "strokes": 3,
+  "grade": 1,
+  "joyo": true,
+  "n": 5,
+  "edu": true
+ },
+ {
+  "char": "火",
+  "sounds": [
+   {
+    "hun": "불",
+    "eum": "화"
+   }
+  ],
+  "on": [
+   "カ"
+  ],
+  "kun": [
+   "ひ",
+   "-び",
+   "ほ-"
+  ],
+  "meaning": "fire",
+  "strokes": 4,
+  "grade": 1,
+  "joyo": true,
+  "n": 5,
+  "edu": true
+ },
+ {
+  "char": "家",
+  "sounds": [
+   {
+    "hun": "집",
+    "eum": "가"
+   }
+  ],
+  "on": [
+   "カ",
+   "ケ"
+  ],
+  "kun": [
+   "や",
+   "いえ",
+   "うち"
+  ],
+  "meaning": "house, home, family",
+  "strokes": 10,
+  "grade": 2,
+  "joyo": true,
+  "n": 4,
+  "edu": true
+ },
+ {
+  "char": "族",
+  "sounds": [
+   {
+    "hun": "겨레",
+    "eum": "족"
+   }
+  ],
+  "on": [
+   "ゾク"
+  ],
+  "meaning": "tribe, family",
+  "strokes": 11,
+  "grade": 3,
+  "joyo": true,
+  "n": 4,
+  "edu": true
+ },
+ {
+  "char": "本",
+  "sounds": [
+   {
+    "hun": "근본",
+    "eum": "본"
+   }
+  ],
+  "on": [
+   "ホン"
+  ],
+  "kun": [
+   "もと"
+  ],
+  "meaning": "book, present, main",
+  "strokes": 5,
+  "grade": 1,
+  "joyo": true,
+  "n": 5,
+  "edu": true
+ },
+ {
+  "char": "語",
+  "sounds": [
+   {
+    "hun": "말씀",
+    "eum": "어"
+   }
+  ],
+  "on": [
+   "ゴ"
+  ],
+  "kun": [
+   "かた.る",
+   "かた.らう"
+  ],
+  "meaning": "word, speech, language",
+  "strokes": 14,
+  "grade": 2,
+  "joyo": true,
+  "n": 5,
+  "edu": true
+ },
+ {
+  "char": "韓",
+  "sounds": [
+   {
+    "hun": "나라",
+    "eum": "한"
+   }
+  ],
+  "on": [
+   "カン"
+  ],
+  "kun": [
+   "から",
+   "いげた"
+  ],
+  "meaning": "Korea",
+  "strokes": 18,
+  "grade": 8,
+  "joyo": true,
+  "edu": true
+ },
+ {
+  "char": "国",
+  "ko": "國",
+  "sounds": [
+   {
+    "hun": "나라",
+    "eum": "국"
+   }
+  ],
+  "on": [
+   "コク"
+  ],
+  "kun": [
+   "くに"
+  ],
+  "meaning": "country",
+  "strokes": 8,
+  "grade": 2,
+  "joyo": true,
+  "n": 5,
+  "edu": true
+ }
+]

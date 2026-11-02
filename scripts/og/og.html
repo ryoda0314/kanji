@@ -1,0 +1,52 @@
+<!doctype html>
+<!-- リンクを貼ったときの絵（1200×630）。アプリと同じ紙と墨、アクセントは わかば。render.mjs がアイコンを差し込んで写す。 -->
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@400;500;600&family=IBM+Plex+Sans+KR:wght@500&family=Noto+Serif+KR:wght@500&family=Shippori+Mincho:wght@700&display=block"
+      rel="stylesheet"
+    />
+    <style>
+      html, body { margin: 0; width: 1200px; height: 630px; background: #fcfbf8; color: #172033; font-family: "IBM Plex Sans JP", sans-serif; }
+      .page { box-sizing: border-box; width: 1200px; height: 630px; padding: 72px 80px; display: grid; grid-template-columns: 1fr 440px; gap: 64px; align-items: center; }
+      .brand { display: flex; align-items: center; gap: 18px; }
+      .brand img { display: block; box-sizing: border-box; width: 88px; height: 88px; border: 1.5px solid #e4e7ec; border-radius: 20px; }
+      .name { font-family: "Shippori Mincho", serif; font-weight: 700; font-size: 56px; letter-spacing: 0.08em; }
+      .tag { margin: 44px 0 0; font-family: "Shippori Mincho", serif; font-weight: 700; font-size: 46px; line-height: 1.45; letter-spacing: 0.03em; }
+      .sub { margin: 24px 0 0; font-size: 24px; line-height: 1.7; color: #3b4558; }
+      .sub .ko { font-family: "IBM Plex Sans KR", sans-serif; font-weight: 500; color: #172033; }
+      .sub .hj { font-family: "Noto Serif KR", serif; color: #172033; }
+      .card { border: 1.5px solid #d4d9e1; border-radius: 20px; padding: 28px 28px 24px; background: #fcfbf8; }
+      .word { display: flex; align-items: baseline; gap: 16px; font-family: "IBM Plex Sans KR", sans-serif; font-weight: 500; font-size: 52px; }
+      .word .hj { font-family: "Noto Serif KR", serif; font-size: 38px; color: #3b4558; }
+      .gloss { margin: 4px 0 18px; font-size: 20px; color: #5c6578; }
+      .roots { display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid #e4e7ec; border-bottom: 1px solid #e4e7ec; }
+      .cell { display: flex; flex-direction: column; align-items: center; padding: 14px 0 16px; }
+      .cell + .cell { border-left: 1px solid #e4e7ec; }
+      .eum { font-family: "IBM Plex Sans KR", sans-serif; font-weight: 500; font-size: 22px; }
+      .char { font-family: "Noto Serif KR", serif; font-size: 92px; line-height: 1.15; }
+      .on { font-size: 18px; color: #5c6578; }
+      .links { margin: 16px 0 0; font-size: 19px; color: #3b4558; }
+      .links .ko { font-family: "IBM Plex Sans KR", sans-serif; font-weight: 500; color: #172033; text-decoration: underline dotted #6a4fe0; text-decoration-thickness: 2px; text-underline-offset: 6px; }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <div>
+        <div class="brand">{{ICON}}<span class="name">ことのね</span></div>
+        <p class="tag">覚えた韓国語を、<br />漢字の根でつなぐ。</p>
+        <p class="sub"><span class="ko">학생</span> を打つと <span class="hj">学生</span> に分かれて、<br />習っていない語まで読めるようになる。</p>
+      </div>
+      <div class="card">
+        <div class="word">학생<span class="hj">学生</span></div>
+        <p class="gloss">児童、生徒、学生</p>
+        <div class="roots">
+          <div class="cell"><span class="eum">학</span><span class="char">学</span><span class="on">ガク・まなぶ</span></div>
+          <div class="cell"><span class="eum">생</span><span class="char">生</span><span class="on">セイ・いきる</span></div>
+        </div>
+        <p class="links">同じ 学 で <span class="ko">대학</span>・<span class="ko">학교</span> とつながる</p>
+      </div>
+    </div>
+  </body>
+</html>

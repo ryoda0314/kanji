@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, interactive-widget=resizes-visual" />
+    <meta name="theme-color" content="#fcfbf8" />
+    <meta name="description" content="아는 한자어가, 그대로 일본어가 된다. 학생을 입력하면 学生 がくせい와 소리 짝(학 → がく, 생 → せい)이 보이고, 짝이 모이면 아는 한자어를 일본어로 말할 수 있게 돼요." />
+    <!-- リンクを貼ったときのカード（X・LINE など）。絵は scripts/og/render.mjs で作る。絶対 URL が要るので、公開先を .env の VITE_SITE_URL に。 -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="말씨앗" />
+    <meta property="og:title" content="말씨앗 — 아는 한자어가, 그대로 일본어가 된다" />
+    <meta property="og:description" content="한국어 한자어 약 5,800개는 일본어에도 같은 한자, 같은 뜻으로 있어요. 소리 짝(학 → がく)만 모으면 아는 한자어가 그대로 일본어 단어가 돼요." />
+    <meta property="og:url" content="%VITE_SITE_URL%" />
+    <meta property="og:image" content="%VITE_SITE_URL%og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="말씨앗: 학생 → 学生 がくせい, 학 → がく, 생 → せい" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" type="image/png" href="./icons/icon-192.png" />
+    <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@400;500;600&family=IBM+Plex+Sans+KR:wght@400;500;600&family=Noto+Serif+KR:wght@500&family=Noto+Serif+JP:wght@500&family=Shippori+Mincho:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- 名前（말씨앗）の明朝 고운바탕 は、名前の字だけ読む。名前を変えたら text= も。 -->
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@700&text=말씨앗&display=swap" rel="stylesheet" />
+    <title>말씨앗</title>
+  </head>
+  <body>
+    <div class="status-fill" aria-hidden="true"></div>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

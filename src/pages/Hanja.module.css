@@ -1,0 +1,24 @@
+.lead { font-size: 17px; color: var(--ink); font-weight: 600; }
+.cells { padding-top: 10px; }
+
+/* 常用漢字：集めた数と、細い目盛り（ことのあめ の進み具合と同じ 3 px）。 */
+.progress { display: flex; flex-direction: column; gap: 8px; padding: 4px 0 8px; }
+.progressText { font-size: 15px; font-weight: 600; font-variant-numeric: tabular-nums; }
+.bar { display: block; height: 3px; border-radius: 2px; background: var(--line); overflow: hidden; }
+.bar > span { display: block; height: 3px; background: var(--accent); min-width: 2px; }
+
+.empty { display: flex; flex-direction: column; align-items: center; gap: 12px; padding: 32px 8px; text-align: center; }
+.empty p { margin: 0; font-size: 14px; line-height: 1.8; color: var(--muted); max-width: 22em; }
+.sprout { width: 160px; }
+
+/* 소리 짝：받침ごとに、학 → がく の札を並べる。 */
+.pairsCount { margin: 0; font-size: 15px; font-weight: 600; color: var(--accent); }
+.pairs { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px; }
+.pair {
+  display: inline-flex; align-items: baseline; gap: 5px; padding: 6px 10px;
+  border: 1px solid var(--line-2); border-radius: 10px; color: var(--ink); text-decoration: none; font-size: 16px; font-weight: 600;
+}
+.pair:hover { background: var(--surface); }
+.pairArrow { font-size: 12px; font-weight: 400; color: var(--faint); }
+.pairJa { color: var(--accent); }
+.pairChar { margin-left: 2px; font-size: 14px; font-weight: 500; color: var(--muted); }

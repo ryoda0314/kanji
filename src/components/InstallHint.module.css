@@ -1,0 +1,10 @@
+/* ホーム画面に追加しておく、の案内（罫線の枠。閉じられる）。 */
+.card { display: flex; flex-direction: column; gap: 8px; padding: 14px 16px 16px; border: 1px solid var(--line-2); border-radius: var(--radius); }
+.head { display: flex; align-items: center; gap: 8px; }
+.title { flex: 1; margin: 0; font-size: 15px; font-weight: 600; }
+.close {
+  width: 36px; height: 36px; margin: -6px -8px -6px 0; flex-shrink: 0; border: 0; background: none; color: var(--muted);
+  display: inline-flex; align-items: center; justify-content: center; cursor: pointer;
+}
+.how { margin: 0; font-size: 13px; line-height: 1.7; color: var(--ink-2); }
+.add { align-self: flex-start; min-height: 44px; font-size: 14px; }

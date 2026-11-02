@@ -1,0 +1,24 @@
+.button {
+  position: relative;
+  flex-shrink: 0;
+  width: var(--tap);
+  height: var(--tap);
+  border-radius: 50%;
+  border: 1px solid var(--line-2);
+  background: var(--paper);
+  color: var(--ink);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.lg { width: 64px; height: 64px; }
+.error { border-color: var(--danger); color: var(--danger); }
+.playing { border-color: var(--accent); background: var(--accent); color: #fff; }
+/* 読んでいる間、水面に落ちた雨粒のような輪が広がる。 */
+.playing::before, .playing::after {
+  content: ""; position: absolute; inset: -1px; border-radius: 50%; border: 1.5px solid var(--accent);
+  animation: ripple 1.6s ease-out infinite; pointer-events: none;
+}
+.playing::after { animation-delay: 0.8s; }
+@keyframes ripple { from { transform: scale(1); opacity: 0.55; } to { transform: scale(1.9); opacity: 0; } }

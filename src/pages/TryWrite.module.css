@@ -1,0 +1,44 @@
+/* 써 보기：言葉（かなと意味）を上に、字を置く升を真ん中に、札を下に。札は明朝の字だけ（訓と音は違えたときに）。 */
+.word { display: flex; align-items: center; gap: 14px; }
+.wordText { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+.kana { font-size: 30px; font-weight: 500; line-height: 1.35; overflow-wrap: anywhere; }
+.gloss { font-size: 15px; line-height: 1.6; color: var(--ink-2); overflow-wrap: anywhere; }
+
+/* 升：字の大きさの四角を、送り仮名と並べる。 */
+.slots {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 6px;
+  padding: 20px 12px; border: 1px solid var(--line-2); border-radius: 16px;
+}
+.slot {
+  all: unset; box-sizing: border-box; cursor: pointer; width: 76px; height: 76px;
+  display: flex; align-items: center; justify-content: center; border: 2px dashed var(--line-2); border-radius: 12px;
+  font-size: 52px; line-height: 1;
+}
+.slot:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.slotFilled { border-style: solid; border-color: var(--ink); animation: put-in 0.18s ease-out both; }
+@keyframes put-in { from { transform: scale(0.9); } }
+/* 違った升（札に戻したところ）：色だけに頼らず、線の形も変える。 */
+.slotWrong { border-color: var(--accent); border-style: dotted; background: var(--tint); }
+/* 答えを見たあと、升の中に薄く見える字（自分で並べ直す）。 */
+.ghost { color: var(--line-2); }
+.fixed { font-size: 36px; line-height: 1; color: var(--ink-2); }
+
+.wrongs { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 4px; font-size: 14px; line-height: 1.7; color: var(--again); font-weight: 500; }
+
+/* 札 */
+.tray { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; }
+.tile {
+  all: unset; box-sizing: border-box; cursor: pointer; width: 100%; min-height: 72px;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0;
+  border: 1px solid var(--line-2); border-radius: 12px; background: var(--paper);
+}
+.tile:hover { background: var(--surface); }
+.tile:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.tile:disabled { cursor: default; opacity: 0.25; }
+.tileChar { font-size: 40px; line-height: 1.2; }
+.tileEum { padding: 0 4px; font-size: 12px; font-weight: 600; color: var(--muted); line-height: 1.3; text-align: center; overflow-wrap: anywhere; }
+
+@media (min-width: 720px) {
+  .slot { width: 92px; height: 92px; font-size: 64px; }
+  .tray { grid-template-columns: repeat(auto-fill, minmax(84px, 1fr)); }
+}

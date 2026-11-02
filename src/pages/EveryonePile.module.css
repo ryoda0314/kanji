@@ -1,0 +1,86 @@
+/* みんなの雨の「積もる雨」の見え方（EveryonePile）：みんなが集めた語が雨になって降り、下に積もって山になる。積もった札は 文で出会う の札と同じ色分け
+   （集めた語は紫、集めた字で読める語はアクセント、まだの語は罫線の色）。 */
+.wrap { display: flex; flex-direction: column; gap: 14px; }
+.head { display: flex; flex-direction: column; gap: 4px; }
+.count { margin: 0; font-size: 14px; color: var(--ink-2); }
+.count b { margin: 0 2px 0 8px; font-size: 22px; font-weight: 600; color: var(--accent); font-variant-numeric: tabular-nums; }
+/* いま降った語（読み上げにも知らせる）。空のときも高さを取って、画面が跳ねないように。 */
+.now { margin: 0; min-height: 30px; display: flex; align-items: baseline; gap: 8px; }
+.nowLabel { font-size: 12px; font-weight: 600; color: var(--muted); }
+.nowWord { font-size: 20px; font-weight: 500; }
+.nowHanja { font-size: 15px; color: var(--ink-2); }
+.nowHanja [aria-hidden="true"] { color: var(--accent); font-weight: 600; }
+
+/* 舞台：雨の降る空と、下の地面。 */
+.stage {
+  position: relative; height: clamp(360px, 60vh, 600px); overflow: hidden;
+  border-radius: 16px; background: var(--surface);
+  /* 全体を見るときは、山に合わせて低くなる */
+  transition: height 0.7s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.quiet {
+  position: absolute; left: 24px; right: 24px; top: 40%; margin: 0; text-align: center;
+  font-size: 14px; line-height: 1.7; color: var(--muted);
+}
+
+/* 背景の雨の筋：舞台と同じ高さの枠を上から下へ流し、その下の端に短い線を描く。 */
+.streaks { position: absolute; inset: 0; pointer-events: none; }
+.streak { position: absolute; top: 0; bottom: 0; width: 1px; transform: translateY(-100%); animation: streak linear infinite; }
+.streak::after {
+  content: ""; position: absolute; left: 0; bottom: 0; width: 1px; height: 18px;
+  background: var(--leaf-sky); opacity: 0.35;
+}
+@keyframes streak {
+  from { transform: translate(0, -100%); }
+  to { transform: translate(-18px, 6%); }
+}
+
+/* 山のある世界：地面（舞台の下の端）から上へ。幅は語の数に合わせて舞台より広くなり、真ん中を舞台の真ん中に合わせる
+   （幅と左の寄せは Everyone.tsx で）。見せ方（山の頂を追う・全体を縮める）は transform で。 */
+.world {
+  position: absolute; left: 50%; bottom: 0; height: 0;
+  transform-origin: 50% 100%; transition: transform 0.7s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.chip {
+  position: absolute; box-sizing: border-box; height: 22px; padding: 0;
+  display: flex; align-items: center; justify-content: center;
+  border: 1px solid var(--line-2); border-radius: 6px; background: var(--paper); color: var(--ink);
+  font: inherit; font-size: 13px; line-height: 1; white-space: nowrap; cursor: pointer;
+  /* 溶けた語が抜けて積み直すときは、なめらかに沈む */
+  transition: left 0.8s ease, bottom 0.8s ease;
+}
+.chip:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+.new { border-style: solid; }
+.readable { border-color: var(--accent); background: var(--tint); }
+.owned { border-color: var(--again); background: var(--again-tint); }
+/* 新しく積もった札：しばらく縁取りが残り、着いた所に小さな波紋。 */
+.fell { animation: fresh 6s ease-out both; }
+@keyframes fresh {
+  from { outline: 2px solid var(--accent); outline-offset: 1px; }
+  to { outline: 2px solid transparent; outline-offset: 1px; }
+}
+.fell::after {
+  content: ""; position: absolute; left: 50%; bottom: -3px; width: 10px; height: 4px; margin-left: -5px;
+  border: 1px solid var(--leaf-sky); border-radius: 50%; opacity: 0; pointer-events: none;
+  animation: splash 0.6s ease-out;
+}
+@keyframes splash {
+  from { opacity: 0.9; transform: scale(0.4); }
+  to { opacity: 0; transform: scale(5, 3); }
+}
+/* 落ちている札：上に雨の筋を引く。 */
+.drop { pointer-events: none; transition: none; }
+.drop::before {
+  content: ""; position: absolute; left: 50%; bottom: 100%; width: 1px; height: 34px;
+  background: var(--leaf-sky); opacity: 0.55;
+}
+
+.tools { display: flex; align-items: center; gap: 12px; }
+.toggle { min-height: 44px; font-size: 14px; }
+.piled { font-size: 13px; color: var(--muted); font-variant-numeric: tabular-nums; }
+
+@media (prefers-reduced-motion: reduce) {
+  .stage, .world, .chip { transition: none; }
+  .fell, .fell::after { animation: none; }
+}

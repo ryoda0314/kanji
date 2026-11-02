@@ -1,0 +1,28 @@
+.titleEum { margin-left: 10px; font-weight: 500; color: var(--muted); }
+.meaning { display: flex; flex-direction: column; gap: 4px; }
+.meaning p { margin: 0; font-size: 15px; line-height: 1.7; color: var(--ink-2); overflow-wrap: anywhere; }
+.owned { margin: 0; font-size: 13px; font-weight: 600; color: var(--accent); }
+.paged { display: flex; flex-direction: column; }
+
+
+/* この字で書く言葉：読みの一覧ではなく、言葉のまとまりで（音読みは音と語、訓読みは言葉と、その言葉からできた語）。 */
+.written { display: flex; flex-direction: column; gap: 8px; }
+.groups { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
+.group { display: flex; flex-direction: column; gap: 6px; padding: 10px 0; border-bottom: 1px solid var(--line); }
+.groupHead { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px; }
+.groupReading { font-size: 20px; font-weight: 600; color: var(--ink); }
+.groupKind { font-size: 11px; font-weight: 600; padding: 1px 8px; border-radius: 999px; background: var(--surface); color: var(--ink-2); white-space: nowrap; }
+.headWord { all: unset; cursor: pointer; display: inline-flex; align-items: baseline; gap: 8px; border-radius: 6px; }
+.headWord:hover { background: var(--surface); }
+.headWord:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.headWord .hanja { font-size: 22px; }
+.headKana { font-size: 15px; color: var(--ink-2); }
+.headGloss { font-size: 13px; color: var(--muted); }
+.have { font-size: 11px; font-weight: 600; color: var(--accent); }
+.groupWords { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 6px; }
+.word { all: unset; cursor: pointer; padding: 2px 8px; border-radius: 8px; font-size: 16px; color: var(--muted); border: 1px solid var(--line); }
+.word:hover { background: var(--surface); }
+.word:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+/* 集めた語：ことのあめ の「前にも出会った」と同じ紫の点線。 */
+.wordOwned { color: var(--ink); border-color: var(--again); border-style: dashed; }
+.groupMore { font-size: 12px; color: var(--faint); }

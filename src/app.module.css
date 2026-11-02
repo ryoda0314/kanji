@@ -1,0 +1,182 @@
+/* どの画面にも共通の骨組み（ことのあめ の app.module.css と同じ寸法と名前）。 */
+.shell {
+  min-height: calc(100dvh - env(safe-area-inset-top, 0px));
+  display: flex;
+  flex-direction: column;
+  max-width: 560px;
+  margin: 0 auto;
+  border-left: 1px solid var(--line);
+  border-right: 1px solid var(--line);
+  background: var(--paper);
+}
+@media (max-width: 560px) {
+  .shell { border: 0; }
+}
+
+/* 下に固定したタブの分の余白（BottomNav: 4 + 50 px、罫線、--nav-bottom）。 */
+.main { flex: 1; display: flex; flex-direction: column; padding-bottom: calc(55px + var(--nav-bottom)); }
+
+/* 上のバー */
+.topbar {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  padding: 12px 20px 0;
+}
+.pair {
+  min-height: var(--tap); padding: 0 16px; border: 1px solid var(--line-2); border-radius: 999px;
+  display: inline-flex; align-items: center; gap: 8px; font-size: 13px; text-decoration: none; color: var(--ink);
+  flex-shrink: 0;
+}
+.subbar {
+  display: flex; align-items: center; gap: 4px;
+  padding: 8px 12px 8px 8px;
+  border-bottom: 1px solid var(--line);
+  min-height: 61px;
+}
+.iconLink {
+  width: var(--tap); height: var(--tap); flex-shrink: 0; border: 0; background: none; cursor: pointer;
+  display: inline-flex; align-items: center; justify-content: center; color: var(--ink);
+}
+.subtitleStrong { flex: 1; min-width: 0; margin: 0; font-size: 15px; font-weight: 600; padding-left: 12px; }
+.subtitleStrong.withBack { padding-left: 0; }
+.subCount { font-size: 13px; color: var(--muted); font-variant-numeric: tabular-nums; padding-right: 8px; }
+
+/* 中身 */
+.body { flex: 1; display: flex; flex-direction: column; gap: 32px; padding: 28px 20px 32px; }
+.bodyTight { flex: 1; display: flex; flex-direction: column; gap: 28px; padding: 20px 20px 40px; }
+
+.lead { margin: 0; font-size: 15px; line-height: 1.75; color: var(--muted); }
+.stack { display: flex; flex-direction: column; gap: 16px; }
+.stackSm { display: flex; flex-direction: column; gap: 8px; }
+.note { margin: 0; font-size: 13px; color: var(--muted); line-height: 1.7; }
+.error { margin: 0; font-size: 14px; color: var(--danger); }
+
+/* 罫線で区切る一覧 */
+.listHead {
+  display: flex; align-items: baseline; justify-content: space-between; gap: 12px;
+  padding-bottom: 12px; border-bottom: 1px solid var(--line);
+}
+.listHead h2 { margin: 0; font-size: 15px; font-weight: 600; }
+.count { font-size: 13px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.headLink { font-size: 13px; font-weight: 600; color: var(--accent); text-decoration: none; white-space: nowrap; }
+.plainList { list-style: none; margin: 0; padding: 0; }
+.empty { padding: 16px 0; font-size: 14px; color: var(--muted); border-bottom: 1px solid var(--line); margin: 0; line-height: 1.7; }
+.more {
+  align-self: center; min-height: var(--tap); padding: 0 20px; display: inline-flex; align-items: center;
+  border: 1px solid var(--line-2); border-radius: 999px; background: var(--paper);
+  font-size: 14px; color: var(--ink-2); cursor: pointer; margin-top: 16px;
+}
+
+/* 語の一行：ハングル、漢字、意味。押すとその語が開く。 */
+.wordRow {
+  width: 100%; display: flex; align-items: center; gap: 14px; padding: 14px 0; border: 0; border-bottom: 1px solid var(--line);
+  background: none; color: var(--ink); font: inherit; text-align: left; cursor: pointer; text-decoration: none;
+}
+.wordRow:focus-visible { outline-offset: -2px; }
+.wordText { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+.wordLine { display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 12px; }
+.wordHangul { font-size: 20px; font-weight: 500; line-height: 1.5; overflow-wrap: anywhere; }
+.wordHanja { font-size: 18px; line-height: 1.5; color: var(--ink-2); }
+.wordGloss { font-size: 13px; color: var(--muted); overflow-wrap: anywhere; line-height: 1.6; }
+/* まだ集めていない語の漢字（？ で伏せる）。 */
+.masked { color: var(--faint); letter-spacing: 0.08em; }
+.wordMeta { font-size: 12px; color: var(--faint); font-variant-numeric: tabular-nums; }
+/* 下の小さな行に、覚え具合の目盛りと日を並べる。 */
+.metaRow { display: flex; align-items: flex-end; gap: 12px; margin-top: 4px; }
+.chev { flex-shrink: 0; color: var(--faint); display: inline-flex; }
+.chev svg { transform: rotate(180deg); }
+/* 見つける：まだ集めていない字（あと1字）。 */
+.missing { color: var(--faint); text-decoration: underline dotted var(--accent); text-decoration-thickness: 2px; text-underline-offset: 0.3em; }
+
+/* 見出しの罫（가나다 の ㄱ、基礎漢字の行など）。 */
+.groupHead {
+  margin: 20px 0 0; display: flex; align-items: baseline; gap: 10px;
+  padding-bottom: 8px; border-bottom: 1.5px solid var(--ink); font-size: 15px; font-weight: 600;
+}
+.groupHead:first-child { margin-top: 0; }
+.groupHead small { font-size: 12px; font-weight: 500; color: var(--muted); font-variant-numeric: tabular-nums; }
+
+/* 絞り込み（ことのあめ の メモ と同じ丸い札）。電話では横に流し、広い画面では折り返す。 */
+.filters { display: flex; gap: 6px; overflow-x: auto; margin: 0 -20px; padding: 0 20px; scrollbar-width: none; }
+.filters::-webkit-scrollbar { display: none; }
+.filter {
+  flex: 0 0 auto; min-height: 36px; padding: 0 12px; display: inline-flex; align-items: center; gap: 6px;
+  border: 1px solid var(--line-2); border-radius: 999px; background: var(--paper); color: var(--ink-2);
+  font: inherit; font-size: 13px; cursor: pointer; text-decoration: none;
+}
+.filterOn { border-color: var(--ink); background: var(--ink); color: var(--paper); font-weight: 600; }
+.filterCount { font-variant-numeric: tabular-nums; opacity: 0.7; }
+.filterHanja { font-family: var(--font-hanja); font-size: 16px; }
+.search {
+  width: 100%; min-height: 44px; padding: 0 12px; border: 1px solid var(--line-2); border-radius: var(--radius);
+  background: var(--paper); font-size: 16px;
+}
+.tools { display: flex; flex-direction: column; gap: 10px; }
+
+/* 見方の切り替え（ことのあめ の 雨の種類 と同じ）。 */
+.views { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); border: 1px solid var(--line-2); border-radius: var(--radius); overflow: hidden; }
+.view {
+  min-height: var(--tap); display: flex; align-items: center; justify-content: center; gap: 6px; padding: 0 6px;
+  border: 0; background: var(--paper); font: inherit; font-size: 14px; color: var(--ink-2); text-decoration: none; cursor: pointer;
+}
+.view + .view { border-left: 1px solid var(--line-2); }
+.view[aria-current="page"], .view[aria-pressed="true"] { background: var(--ink); color: var(--paper); font-weight: 600; }
+.view:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
+
+/* 自分：自分のための数（ほかの人とは比べない）。 */
+.stats { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); margin: 0; border-top: 1px solid var(--line); }
+.stat { display: flex; flex-direction: column; gap: 2px; padding: 14px 0; border-bottom: 1px solid var(--line); min-width: 0; }
+.stat:nth-child(odd) { padding-right: 12px; border-right: 1px solid var(--line); }
+.stat:nth-child(even) { padding-left: 16px; }
+.stat dt { font-size: 12px; color: var(--muted); }
+.stat dd { margin: 0; font-size: 26px; font-weight: 500; font-variant-numeric: tabular-nums; line-height: 1.3; }
+.stat dd small { margin-left: 2px; font-size: 13px; color: var(--muted); font-weight: 400; }
+
+.panel { display: flex; flex-direction: column; gap: 10px; padding: 18px; background: var(--surface); border-radius: var(--radius); }
+.quietAction {
+  align-self: flex-start; display: inline-flex; align-items: center; gap: 8px; min-height: var(--tap);
+  font-size: 14px; font-weight: 500; color: var(--accent); text-decoration: none; border: 0; background: none; padding: 0; cursor: pointer;
+}
+
+/* 待っている間（辞書の読み込み）：静かな形が、待ちが長いときだけ浮かぶ。 */
+.ghost { display: flex; flex-direction: column; gap: 14px; animation: ghost-in 0.4s ease-out 0.18s both; }
+.ghostLine { height: 14px; border-radius: 6px; background: var(--surface); }
+.ghostBlock { height: 112px; border-radius: var(--radius); background: var(--surface); }
+@keyframes ghost-in { from { opacity: 0; } to { opacity: 1; } }
+
+/* 広い画面で左右に分かれる組。電話では順に並ぶだけ。 */
+.col { display: contents; }
+
+/* タブレットから（720 px）：タブは左の列へ、画面はその横に一段で。 */
+@media (min-width: 720px) {
+  .shell { flex-direction: row; max-width: none; border: 0; }
+  .main { min-width: 0; padding-bottom: 56px; padding-right: env(safe-area-inset-right, 0px); }
+  .main > * { width: 100%; max-width: 720px; margin-inline: auto; }
+  .topbar { padding: 20px 32px 0; }
+  .subbar { padding: 14px 32px 14px 24px; }
+  .body { padding: 32px 32px 48px; }
+  .bodyTight { padding: 28px 32px 48px; }
+  .mobileOnly { display: none !important; }
+  .stats { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .stat:nth-child(odd), .stat:nth-child(even) { padding: 16px 20px; border-right: 1px solid var(--line); }
+  .stat:first-child { padding-left: 0; }
+  .stat:last-child { border-right: 0; }
+  .filters { flex-wrap: wrap; overflow-x: visible; margin: 0; padding: 0; }
+}
+
+/* PC（1024 px）：幅を広げ、二つに分かれる画面（あつめる、見つける、字）は左右に。 */
+@media (min-width: 1024px) {
+  .main > * { max-width: 1080px; }
+  .topbar { padding: 20px 40px 0; }
+  .subbar { padding: 14px 40px 14px 32px; }
+  .body { padding: 40px 40px 48px; }
+  .bodyTight { padding: 32px 40px 48px; }
+  .split { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px 56px; align-items: start; }
+  .split > .col { display: flex; flex-direction: column; gap: 28px; min-width: 0; }
+  .split > .stick { position: sticky; top: 32px; }
+  .split > .full { grid-column: 1 / -1; }
+}
+
+/* 大きな画面（1280 px）：タブの列に名前が付き、アプリは真ん中の一塊に。 */
+@media (min-width: 1280px) {
+  .shell { max-width: 1360px; border-left: 1px solid var(--line); border-right: 1px solid var(--line); }
+}

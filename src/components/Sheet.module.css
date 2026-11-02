@@ -1,0 +1,23 @@
+.backdrop {
+  position: fixed; inset: 0; z-index: 20; background: color-mix(in srgb, var(--ink) 32%, transparent);
+  display: flex; align-items: flex-end; justify-content: center;
+}
+.sheet {
+  width: 100%; max-width: 560px; max-height: 90dvh; overflow-y: auto; overscroll-behavior: contain;
+  background: var(--paper); border-radius: 16px 16px 0 0;
+  padding: 16px 20px max(24px, env(safe-area-inset-bottom, 0px));
+  display: flex; flex-direction: column; gap: 16px; outline: none;
+  animation: sheet-up 0.28s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+@keyframes sheet-up { from { transform: translateY(24px); opacity: 0; } }
+.head { display: flex; align-items: center; justify-content: space-between; }
+.close {
+  width: var(--tap); height: var(--tap); margin-right: -10px; border: 0; background: transparent; color: var(--ink);
+  display: inline-flex; align-items: center; justify-content: center; cursor: pointer;
+}
+
+/* タブレットから：真ん中に開く窓。 */
+@media (min-width: 720px) {
+  .backdrop { align-items: center; padding: 32px; }
+  .sheet { border-radius: 16px; max-height: 84dvh; padding-bottom: 24px; }
+}

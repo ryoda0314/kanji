@@ -1,0 +1,10 @@
+/* ふりかえる：ひと回り終えたところ。 */
+.end { display: flex; flex-direction: column; gap: 12px; animation: end-in 0.35s ease-out both; }
+@keyframes end-in { from { opacity: 0; transform: translateY(8px); } }
+.endTitle { margin: 0; font-size: 17px; font-weight: 600; line-height: 1.6; }
+.endActions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; }
+.reviewed { display: flex; flex-direction: column; gap: 4px; margin-top: 20px; }
+.reviewed h2 { padding-bottom: 8px; border-bottom: 1px solid var(--line); }
+
+/* 복습の向き（읽기・쓰기）。カードの上に。 */
+.modes { margin-bottom: 16px; }

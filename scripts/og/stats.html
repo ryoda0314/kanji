@@ -1,0 +1,55 @@
+<!doctype html>
+<!-- 使われ方の数の画像（1200×675、X に貼る横長）。リンクのカード（og.html）と同じ紙と墨、アクセントは わかば。
+     stats.mjs が、いまの数とアイコンを差し込んで写す。 -->
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@400;500;600&family=Shippori+Mincho:wght@700&display=block"
+      rel="stylesheet"
+    />
+    <style>
+      html, body { margin: 0; width: 1200px; height: 675px; background: #fcfbf8; color: #172033; font-family: "IBM Plex Sans JP", sans-serif; }
+      .page { box-sizing: border-box; width: 1200px; height: 675px; padding: 56px 80px 52px; display: flex; flex-direction: column; }
+      .head { display: flex; align-items: center; justify-content: space-between; }
+      .brand { display: flex; align-items: center; gap: 14px; }
+      .brand img { display: block; box-sizing: border-box; width: 60px; height: 60px; border: 1.5px solid #e4e7ec; border-radius: 14px; }
+      .name { font-family: "Shippori Mincho", serif; font-weight: 700; font-size: 38px; letter-spacing: 0.08em; }
+      .range { font-size: 22px; color: #5c6578; font-variant-numeric: tabular-nums; }
+      .main { flex: 1; display: grid; grid-template-columns: minmax(0, 1fr) 340px; gap: 64px; align-items: center; }
+      .label { margin: 0; font-size: 26px; color: #3b4558; }
+      .hero { margin: 4px 0 0; font-family: "Shippori Mincho", serif; font-weight: 700; font-size: 150px; line-height: 1.05; color: #0f7a50; white-space: nowrap; }
+      .hero small { margin-left: 10px; font-size: 48px; color: #172033; }
+      .side { margin: 0; border-top: 1px solid #e4e7ec; }
+      .stat { padding: 18px 0 20px; border-bottom: 1px solid #e4e7ec; }
+      .stat dt { font-size: 21px; color: #5c6578; }
+      .stat dd { margin: 2px 0 0; font-size: 60px; font-weight: 500; line-height: 1.15; font-variant-numeric: tabular-nums; white-space: nowrap; }
+      .stat dd small { margin-left: 6px; font-size: 24px; color: #5c6578; font-weight: 400; }
+      .foot { display: flex; align-items: baseline; justify-content: space-between; padding-top: 22px; border-top: 1px solid #d4d9e1; }
+      .tag { font-family: "Shippori Mincho", serif; font-weight: 700; font-size: 32px; letter-spacing: 0.03em; }
+      .url { font-size: 22px; color: #3b4558; }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <div class="head">
+        <div class="brand">{{ICON}}<span class="name">ことのね</span></div>
+        <span class="range">{{RANGE}}</span>
+      </div>
+      <div class="main">
+        <div>
+          <p class="label">みんなで集めた、韓国語の漢字語</p>
+          <p class="hero">{{WORDS}}<small>語</small></p>
+        </div>
+        <dl class="side">
+          <div class="stat"><dt>漢字から、ハングルで読めた</dt><dd>{{READS}}<small>回</small></dd></div>
+          <div class="stat"><dt>使ってくれた端末</dt><dd>{{DEVICES}}<small>台</small></dd></div>
+        </dl>
+      </div>
+      <div class="foot">
+        <span class="tag">覚えた韓国語を、漢字の根でつなぐ。</span>
+        <span class="url">{{URL}}</span>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,12 @@
+/* 韓国語の同じ漢字の語との、意味・使い方のちがい。 */
+.diff {
+  margin: 0;
+  padding: 10px 14px;
+  border-radius: var(--radius);
+  background: var(--surface);
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--ink-2);
+  overflow-wrap: anywhere;
+}
+.label { display: block; font-size: 12px; font-weight: 600; color: var(--ink); }

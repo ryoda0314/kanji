@@ -1,0 +1,26 @@
+/* 覚え具合：段階が進むごとに雨粒が一つ増える目盛り（ことのあめ の メモと同じ形）。 */
+.gauge { display: inline-flex; align-items: flex-end; gap: 8px; font-size: 11px; font-weight: 600; letter-spacing: 0.04em; color: var(--accent); }
+.gauge[data-stage="collected"] { color: var(--muted); }
+.drops { display: inline-flex; align-items: flex-end; gap: 3px; }
+.drops > i { display: block; width: 3px; border-radius: 2px; background: var(--line-2); }
+.drops > i[data-on] { background: var(--accent); }
+.drops > i:nth-child(1) { height: 7px; }
+.drops > i:nth-child(2) { height: 10px; }
+.drops > i:nth-child(3) { height: 13px; }
+.drops > i:nth-child(4) { height: 16px; }
+
+/* 一つの語の道のり */
+.box { display: flex; flex-direction: column; gap: 8px; }
+.track { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 6px; padding: 14px 10px; background: var(--surface); border-radius: var(--radius); }
+.step { display: flex; flex-direction: column; align-items: center; justify-content: flex-end; gap: 8px; font-size: 11px; line-height: 1.4; color: var(--faint); text-align: center; }
+.step > i { display: block; width: 4px; border-radius: 2px; background: var(--line-2); }
+.step:nth-child(1) > i { height: 10px; }
+.step:nth-child(2) > i { height: 16px; }
+.step:nth-child(3) > i { height: 22px; }
+.step:nth-child(4) > i { height: 28px; }
+.stepOn { color: var(--accent); }
+.stepOn > i { background: var(--accent); }
+.stepNow { font-weight: 700; }
+.hint { margin: 0; font-size: 13px; line-height: 1.7; color: var(--ink-2); }
+.facts { margin: 0; display: flex; flex-wrap: wrap; gap: 2px 14px; font-size: 12px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.due { color: var(--accent); font-weight: 600; }

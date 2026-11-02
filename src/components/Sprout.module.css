@@ -1,0 +1,21 @@
+.sprout { display: block; width: 100%; height: auto; overflow: visible; }
+
+/* 根が下へ伸びる（線を引くように）。 */
+.roots path {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: root-draw 1.4s 0.35s cubic-bezier(0.3, 0.7, 0.3, 1) forwards;
+}
+.roots path:nth-child(2), .roots path:nth-child(3) { animation-delay: 0.55s; }
+.roots path:nth-child(4), .roots path:nth-child(5), .roots path:nth-child(6) { animation-delay: 0.85s; }
+@keyframes root-draw { to { stroke-dashoffset: 0; } }
+
+/* 葉は茎の付け根から開く。 */
+.leafA, .leafB { transform-box: fill-box; animation: leaf-open 0.9s cubic-bezier(0.2, 0.8, 0.2, 1) both; }
+.leafA { transform-origin: 100% 100%; }
+.leafB { transform-origin: 0% 100%; animation-delay: 0.15s; }
+@keyframes leaf-open { from { transform: scale(0.4) rotate(-6deg); opacity: 0; } }
+
+@media (prefers-reduced-motion: reduce) {
+  .roots path { stroke-dashoffset: 0; }
+}

@@ -1,0 +1,22 @@
+.unlockLabel { margin-top: 8px; }
+
+/* 雨のあとの、ほかの見つけ方 */
+.paths { display: flex; flex-direction: column; }
+.pathsTitle { padding-bottom: 8px; border-bottom: 1px solid var(--line); }
+.path {
+  width: 100%; display: flex; align-items: center; gap: 14px; padding: 14px 0; border: 0; border-bottom: 1px solid var(--line);
+  background: none; color: var(--ink); font: inherit; text-align: left; cursor: pointer;
+}
+.path:focus-visible { outline-offset: -2px; }
+.pathText { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+.pathTitle { font-size: 16px; font-weight: 600; }
+.pathCount { margin-left: 10px; font-size: 14px; font-weight: 600; color: var(--accent); font-variant-numeric: tabular-nums; }
+.pathNote { font-size: 13px; line-height: 1.6; color: var(--muted); }
+.chev { flex-shrink: 0; color: var(--faint); display: inline-flex; }
+.chev svg { transform: rotate(180deg); }
+
+/* 読める語の上の、読んでみる */
+.readPanel { margin: 4px 0 8px; gap: 10px; }
+.readStart { align-self: flex-start; }
+.readStarts { display: flex; flex-wrap: wrap; gap: 8px; }
+.gain { color: var(--accent); font-weight: 600; }

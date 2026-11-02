@@ -1,0 +1,30 @@
+node_modules
+dist
+dist-ssr
+*.local
+.DS_Store
+
+# Editor
+.vscode/*
+!.vscode/extensions.json
+.idea
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Capacitor (Phase 3 で生成)
+/ios
+/android
+
+# データ生成の元ファイル（大容量・再取得可能。生成物 public/data/*.json は追跡する）
+scripts/.cache
+
+# デザイン確認用スクリーンショット
+.shots
+
+# 紹介映像（promo/ は別のプロジェクト。書き出しや取ってきた字・音は promo/.gitignore で外す）
+
+# 使われ方の数の画像（scripts/og/stats.mjs で投稿の直前に書き出す。数が変わるので追跡しない）
+scripts/og/stats*.png

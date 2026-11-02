@@ -1,0 +1,112 @@
+/* あつめる：打つ場所が主役。最初の画面だけ、芽と根の絵と三つの流れ。 */
+.intro { display: flex; flex-direction: column; gap: 10px; }
+.introTitle { margin: 0; font-family: var(--font-mincho); font-size: 24px; font-weight: 700; letter-spacing: 0.04em; line-height: 1.5; }
+
+/* 打つところ（ことのあめ の メモ と同じ組み方）。 */
+.form { display: flex; flex-direction: column; gap: 8px; padding: 16px; background: var(--surface); border-radius: var(--radius); }
+.inputRow { display: flex; gap: 8px; }
+.inputRow :global(.btn) { flex-shrink: 0; padding: 0 20px; }
+.input {
+  flex: 1; min-width: 0; min-height: 52px; padding: 0 14px; border: 1.5px solid var(--ink); border-radius: var(--radius);
+  font-size: 20px; background: var(--paper);
+}
+
+/* 結果 */
+.block { display: flex; flex-direction: column; gap: 16px; animation: block-in 0.35s ease-out both; }
+@keyframes block-in { from { opacity: 0; transform: translateY(8px); } }
+.ask { margin: 0; font-size: 15px; line-height: 1.7; color: var(--ink-2); font-weight: 500; }
+.head { display: flex; align-items: center; gap: 14px; }
+.names { flex: 1; min-width: 0; display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 14px; }
+.big { margin: 0; font-size: 34px; font-weight: 500; line-height: 1.35; overflow-wrap: anywhere; }
+.bigHanja { font-size: 26px; line-height: 1.4; color: var(--ink-2); }
+.gloss { margin: -8px 0 0; font-size: 15px; line-height: 1.7; color: var(--ink-2); overflow-wrap: anywhere; }
+.already { margin: 0; font-size: 14px; font-weight: 600; color: var(--again); }
+.done { margin: 0; display: inline-flex; align-items: center; gap: 6px; font-size: 14px; font-weight: 600; color: var(--accent); }
+
+/* また出会った字で、前の語とつながった。 */
+.links { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 6px; }
+.links li { display: flex; align-items: baseline; gap: 10px; font-size: 14px; line-height: 1.7; color: var(--ink-2); }
+.linkChar { flex-shrink: 0; font-size: 20px; color: var(--again); }
+.linkWord {
+  all: unset; cursor: pointer; font-size: 16px; font-weight: 500; color: var(--ink);
+  text-decoration: underline dotted var(--again); text-decoration-thickness: 2px; text-underline-offset: 0.28em;
+}
+.linkWord:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.linkTail { margin-left: 4px; }
+.opened { display: flex; flex-direction: column; gap: 8px; }
+/* 新しく読めるようになった語は、一つずつ下から現れる。 */
+.openedList > li { animation: block-in 0.4s ease-out both; }
+.openedList > li:nth-child(2) { animation-delay: 0.08s; }
+.openedList > li:nth-child(3) { animation-delay: 0.16s; }
+.openedList > li:nth-child(4) { animation-delay: 0.24s; }
+.openedList > li:nth-child(5) { animation-delay: 0.32s; }
+.openedList > li:nth-child(6) { animation-delay: 0.4s; }
+
+/* はじめての人のための例の語、ハングルの打ち方 */
+.try { display: flex; flex-direction: column; gap: 10px; }
+.tryChips { display: flex; flex-wrap: wrap; gap: 8px; }
+.tryChip {
+  min-height: 44px; padding: 0 16px; border: 1px solid var(--line-2); border-radius: 999px; background: var(--paper);
+  color: var(--ink); font-size: 18px; font-weight: 500; cursor: pointer;
+}
+.tryChip:hover { border-color: var(--accent); }
+.keyboard { font-size: 13px; color: var(--muted); }
+.keyboard summary { cursor: pointer; color: var(--accent); font-weight: 600; min-height: 32px; display: flex; align-items: center; }
+.keyboard ul { margin: 4px 0 0; padding-left: 18px; line-height: 1.8; }
+
+/* 辞書に無い語 */
+.manual { padding: 16px; border: 1px solid var(--line-2); border-radius: var(--radius); }
+.fields { display: flex; flex-direction: column; gap: 10px; }
+.field { display: flex; flex-direction: column; gap: 6px; }
+.guess { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px; margin-top: -2px; }
+.guessChip {
+  min-height: 36px; padding: 0 12px; border: 1px solid var(--line-2); border-radius: 999px; background: var(--paper);
+  color: var(--ink); font-size: 18px; cursor: pointer;
+}
+.guessOn { border-color: var(--accent); background: var(--tint); color: var(--accent); }
+.fieldInput { min-height: 48px; padding: 0 12px; border: 1px solid var(--line-2); border-radius: var(--radius); font-size: 18px; background: var(--paper); }
+
+/* 集めた字で読める語へ */
+.cards { display: flex; flex-direction: column; gap: 10px; }
+.readable {
+  display: flex; align-items: center; gap: 12px; padding: 16px 18px; border: 1px solid var(--line-2); border-radius: var(--radius);
+  color: var(--ink); text-decoration: none;
+}
+.readable:hover { background: var(--surface); }
+.readableAction { flex-shrink: 0; display: inline-flex; align-items: center; gap: 4px; font-size: 14px; font-weight: 600; color: var(--accent); }
+.readableText { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+.readableTitle { font-size: 16px; font-weight: 600; }
+
+/* 最初の画面：芽と根、三つの流れ。 */
+.welcome { display: flex; flex-direction: column; gap: 24px; }
+.ground {
+  height: 196px; border-radius: 16px; background: var(--surface);
+  display: flex; align-items: center; justify-content: center; overflow: hidden;
+}
+.sprout { width: 220px; }
+.steps { margin: 0; padding: 0; list-style: none; counter-reset: step; display: flex; flex-direction: column; gap: 10px; }
+.steps li { counter-increment: step; display: grid; grid-template-columns: 24px minmax(0, 1fr); gap: 10px; font-size: 14px; line-height: 1.7; color: var(--ink-2); }
+.steps li::before {
+  content: counter(step); width: 24px; height: 24px; border-radius: 50%; margin-top: 1px;
+  display: inline-flex; align-items: center; justify-content: center;
+  background: var(--tint); color: var(--accent); font-size: 12px; font-weight: 600; font-variant-numeric: tabular-nums;
+}
+
+@media (min-width: 720px) {
+  .ground { height: 240px; }
+  .sprout { width: 260px; }
+}
+
+/* 韓国語の漢字語から日本語の語へ（학생 → 学生 がくせい）。 */
+.koWord { font-size: 24px; font-weight: 600; line-height: 1.35; color: var(--ink); }
+.koArrow { margin: 0 2px 0 8px; font-weight: 400; color: var(--faint); }
+.same { margin: -6px 0 0; align-self: flex-start; font-size: 13px; font-weight: 600; color: var(--accent); }
+/* 同じ漢字語でも、韓国語と意味・使い方のちがう語（下に DiffNote）。 */
+.sameDiff { color: var(--ink-2); }
+.extra { display: flex; flex-direction: column; gap: 6px; }
+
+/* 일본어로 말할 수 있는 한자어：말씨앗 のいちばんの数。 */
+.sayable { display: flex; align-items: center; gap: 14px; padding: 14px 16px; border-radius: var(--radius); background: var(--tint); }
+.sayableNum { font-size: 44px; font-weight: 600; line-height: 1.1; color: var(--accent); font-variant-numeric: tabular-nums; }
+.sayableText { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.sayableTitle { font-size: 15px; font-weight: 600; color: var(--ink); }

@@ -1,0 +1,641 @@
+{
+ "note": "scripts/net.mjs が作る。アプリの辞書 public/data のとおり。",
+ "owned": [
+  {
+   "ko": "학생",
+   "kanji": "学生",
+   "koForm": "學生",
+   "kana": "がくせい",
+   "gloss": "학생",
+   "kd": null,
+   "lv": 1,
+   "pairs": [
+    "学|がく",
+    "生|せい"
+   ]
+  },
+  {
+   "ko": "대학",
+   "kanji": "大学",
+   "koForm": "大學",
+   "kana": "だいがく",
+   "gloss": "대학, 대학교",
+   "kd": null,
+   "lv": 1,
+   "pairs": [
+    "大|だい",
+    "学|がく"
+   ]
+  },
+  {
+   "ko": "교실",
+   "kanji": "教室",
+   "koForm": "敎室",
+   "kana": "きょうしつ",
+   "gloss": "교실",
+   "kd": null,
+   "lv": 1,
+   "pairs": [
+    "教|きょう",
+    "室|しつ"
+   ]
+  },
+  {
+   "ko": "사장",
+   "kanji": "社長",
+   "koForm": null,
+   "kana": "しゃちょう",
+   "gloss": "사장",
+   "kd": null,
+   "lv": 1,
+   "pairs": [
+    "社|しゃ",
+    "長|ちょう"
+   ]
+  }
+ ],
+ "ownedSayable": 6,
+ "ownedPairs": 7,
+ "typed": {
+  "ko": "회의",
+  "kanji": "会議",
+  "koForm": "會議",
+  "kana": "かいぎ",
+  "gloss": "회의",
+  "kd": null,
+  "lv": 1,
+  "pairs": [
+   "会|かい",
+   "議|ぎ"
+  ],
+  "roots": [
+   {
+    "char": "会",
+    "ko": "會",
+    "eum": "회",
+    "hun": "모일",
+    "rt": "かい",
+    "base": "かい"
+   },
+   {
+    "char": "議",
+    "ko": null,
+    "eum": "의",
+    "hun": "의논할",
+    "rt": "ぎ",
+    "base": "ぎ"
+   }
+  ]
+ },
+ "opened": [
+  {
+   "ko": "회사",
+   "kanji": "会社",
+   "koForm": "會社",
+   "kana": "かいしゃ",
+   "gloss": "회사",
+   "kd": null,
+   "lv": 1,
+   "pairs": [
+    "会|かい",
+    "社|しゃ"
+   ]
+  },
+  {
+   "ko": "교회",
+   "kanji": "教会",
+   "koForm": "敎會",
+   "kana": "きょうかい",
+   "gloss": "교회",
+   "kd": null,
+   "lv": 1,
+   "pairs": [
+    "教|きょう",
+    "会|かい"
+   ]
+  },
+  {
+   "ko": "사회",
+   "kanji": "社会",
+   "koForm": "社會",
+   "kana": "しゃかい",
+   "gloss": "사회",
+   "kd": null,
+   "lv": 1,
+   "pairs": [
+    "社|しゃ",
+    "会|かい"
+   ]
+  },
+  {
+   "ko": "회의실",
+   "kanji": "会議室",
+   "koForm": "會議室",
+   "kana": "かいぎしつ",
+   "gloss": "회의실",
+   "kd": null,
+   "lv": 1,
+   "pairs": [
+    "会|かい",
+    "議|ぎ",
+    "室|しつ"
+   ]
+  },
+  {
+   "ko": "의회",
+   "kanji": "議会",
+   "koForm": "議會",
+   "kana": "ぎかい",
+   "gloss": "의회",
+   "kd": null,
+   "lv": 2,
+   "pairs": [
+    "議|ぎ",
+    "会|かい"
+   ]
+  },
+  {
+   "ko": "의장",
+   "kanji": "議長",
+   "koForm": null,
+   "kana": "ぎちょう",
+   "gloss": "의장",
+   "kd": null,
+   "lv": 2,
+   "pairs": [
+    "議|ぎ",
+    "長|ちょう"
+   ]
+  },
+  {
+   "ko": "회장",
+   "kanji": "会長",
+   "koForm": "會長",
+   "kana": "かいちょう",
+   "gloss": "회장",
+   "kd": null,
+   "lv": 3,
+   "pairs": [
+    "会|かい",
+    "長|ちょう"
+   ]
+  },
+  {
+   "ko": "학회",
+   "kanji": "学会",
+   "koForm": "學會",
+   "kana": "がっかい",
+   "gloss": "학회",
+   "kd": null,
+   "lv": 3,
+   "pairs": [
+    "学|がく",
+    "会|かい"
+   ]
+  }
+ ],
+ "afterSayable": 15,
+ "afterPairs": 9,
+ "say": {
+  "ko": "교회",
+  "kanji": "教会",
+  "koForm": "敎會",
+  "kana": "きょうかい",
+  "gloss": "교회",
+  "kd": null,
+  "lv": 1,
+  "pairs": [
+   "教|きょう",
+   "会|かい"
+  ],
+  "roots": [
+   {
+    "char": "教",
+    "ko": "敎",
+    "eum": "교",
+    "hun": "가르칠",
+    "rt": "きょう",
+    "base": "きょう"
+   },
+   {
+    "char": "会",
+    "ko": "會",
+    "eum": "회",
+    "hun": "모일",
+    "rt": "かい",
+    "base": "かい"
+   }
+  ]
+ },
+ "pairs": {
+  "count": 46,
+  "sayable": 92,
+  "words": 25,
+  "groups": [
+   {
+    "f": "none",
+    "list": [
+     {
+      "char": "家",
+      "reading": "か",
+      "eum": "가"
+     },
+     {
+      "char": "教",
+      "reading": "きょう",
+      "eum": "교"
+     },
+     {
+      "char": "大",
+      "reading": "だい",
+      "eum": "대"
+     },
+     {
+      "char": "社",
+      "reading": "しゃ",
+      "eum": "사"
+     },
+     {
+      "char": "時",
+      "reading": "じ",
+      "eum": "시"
+     },
+     {
+      "char": "要",
+      "reading": "よう",
+      "eum": "요"
+     },
+     {
+      "char": "議",
+      "reading": "ぎ",
+      "eum": "의"
+     },
+     {
+      "char": "子",
+      "reading": "し",
+      "eum": "자"
+     },
+     {
+      "char": "題",
+      "reading": "だい",
+      "eum": "제"
+     },
+     {
+      "char": "表",
+      "reading": "ひょう",
+      "eum": "표"
+     },
+     {
+      "char": "話",
+      "reading": "わ",
+      "eum": "화"
+     },
+     {
+      "char": "会",
+      "reading": "かい",
+      "eum": "회"
+     }
+    ]
+   },
+   {
+    "f": "ㄱ",
+    "list": [
+     {
+      "char": "国",
+      "reading": "こく",
+      "eum": "국"
+     },
+     {
+      "char": "楽",
+      "reading": "がく",
+      "eum": "락"
+     },
+     {
+      "char": "目",
+      "reading": "もく",
+      "eum": "목"
+     },
+     {
+      "char": "束",
+      "reading": "そく",
+      "eum": "속"
+     },
+     {
+      "char": "食",
+      "reading": "しょく",
+      "eum": "식"
+     },
+     {
+      "char": "約",
+      "reading": "やく",
+      "eum": "약"
+     },
+     {
+      "char": "的",
+      "reading": "てき",
+      "eum": "적"
+     },
+     {
+      "char": "族",
+      "reading": "ぞく",
+      "eum": "족"
+     },
+     {
+      "char": "学",
+      "reading": "がく",
+      "eum": "학"
+     }
+    ]
+   },
+   {
+    "f": "ㄴ",
+    "list": [
+     {
+      "char": "間",
+      "reading": "かん",
+      "eum": "간"
+     },
+     {
+      "char": "聞",
+      "reading": "ぶん",
+      "eum": "문"
+     },
+     {
+      "char": "問",
+      "reading": "もん",
+      "eum": "문"
+     },
+     {
+      "char": "新",
+      "reading": "しん",
+      "eum": "신"
+     },
+     {
+      "char": "運",
+      "reading": "うん",
+      "eum": "운"
+     },
+     {
+      "char": "院",
+      "reading": "いん",
+      "eum": "원"
+     },
+     {
+      "char": "銀",
+      "reading": "ぎん",
+      "eum": "은"
+     },
+     {
+      "char": "電",
+      "reading": "でん",
+      "eum": "전"
+     },
+     {
+      "char": "韓",
+      "reading": "かん",
+      "eum": "한"
+     }
+    ]
+   },
+   {
+    "f": "ㄹ",
+    "list": [
+     {
+      "char": "決",
+      "reading": "けつ",
+      "eum": "결"
+     },
+     {
+      "char": "発",
+      "reading": "はつ",
+      "eum": "발"
+     },
+     {
+      "char": "室",
+      "reading": "しつ",
+      "eum": "실"
+     },
+     {
+      "char": "出",
+      "reading": "しゅつ",
+      "eum": "출"
+     },
+     {
+      "char": "必",
+      "reading": "ひつ",
+      "eum": "필"
+     },
+     {
+      "char": "活",
+      "reading": "かつ",
+      "eum": "활"
+     }
+    ]
+   },
+   {
+    "f": "ㅁ",
+    "list": [
+     {
+      "char": "男",
+      "reading": "だん",
+      "eum": "남"
+     },
+     {
+      "char": "音",
+      "reading": "おん",
+      "eum": "음"
+     }
+    ]
+   },
+   {
+    "f": "ㅂ",
+    "list": [
+     {
+      "char": "入",
+      "reading": "にゅう",
+      "eum": "입"
+     }
+    ]
+   },
+   {
+    "f": "ㅇ",
+    "list": [
+     {
+      "char": "堂",
+      "reading": "どう",
+      "eum": "당"
+     },
+     {
+      "char": "動",
+      "reading": "どう",
+      "eum": "동"
+     },
+     {
+      "char": "病",
+      "reading": "びょう",
+      "eum": "병"
+     },
+     {
+      "char": "生",
+      "reading": "せい",
+      "eum": "생"
+     },
+     {
+      "char": "長",
+      "reading": "ちょう",
+      "eum": "장"
+     },
+     {
+      "char": "定",
+      "reading": "てい",
+      "eum": "정"
+     },
+     {
+      "char": "行",
+      "reading": "こう",
+      "eum": "행"
+     }
+    ]
+   }
+  ]
+ },
+ "diff": {
+  "ko": "공부",
+  "meaning": [
+   {
+    "kanji": "勉強",
+    "koForm": "勉强",
+    "kana": "べんきょう",
+    "gloss": "공부",
+    "kd": null,
+    "lv": 3,
+    "pairs": [
+     "勉|べん",
+     "強|きょう"
+    ]
+   }
+  ],
+  "kanji": [
+   {
+    "ko": "공부",
+    "kanji": "工夫",
+    "koForm": null,
+    "kana": "くふう",
+    "gloss": "궁리, 꾀",
+    "kd": null,
+    "lv": 3,
+    "pairs": [
+     "工|く",
+     "夫|ふう"
+    ]
+   }
+  ]
+ },
+ "sentences": [
+  {
+   "id": 30,
+   "ko": "회의 끝나고 나서 커피 살게.",
+   "segs": [
+    {
+     "text": "会議",
+     "kind": "owned",
+     "rt": "かいぎ"
+    },
+    {
+     "text": "終",
+     "kind": "ruby",
+     "rt": "お"
+    },
+    "わっ",
+    "てからコーヒー",
+    {
+     "text": "買",
+     "kind": "ruby",
+     "rt": "か"
+    },
+    "う"
+   ]
+  },
+  {
+   "id": 1436,
+   "ko": "사월부터 새 회사 다녀.",
+   "segs": [
+    "4",
+    {
+     "text": "月",
+     "kind": "ruby",
+     "rt": "がつ"
+    },
+    "から",
+    {
+     "text": "新",
+     "kind": "ruby",
+     "rt": "あたら"
+    },
+    "しい",
+    {
+     "text": "会社",
+     "kind": "readable",
+     "rt": "かいしゃ"
+    },
+    "に",
+    {
+     "text": "通",
+     "kind": "ruby",
+     "rt": "かよ"
+    },
+    "う",
+    "んだ。"
+   ]
+  },
+  {
+   "id": 103,
+   "ko": "학교 도서관에 있어",
+   "segs": [
+    {
+     "text": "大学",
+     "kind": "owned",
+     "rt": "だいがく"
+    },
+    "の",
+    {
+     "text": "図書館",
+     "kind": "new",
+     "rt": "としょかん"
+    },
+    "にいる"
+   ]
+  },
+  {
+   "id": 1678,
+   "ko": "언니가 이 교회에서 결혼식 했어.",
+   "segs": [
+    {
+     "text": "姉",
+     "kind": "ruby",
+     "rt": "あね"
+    },
+    "はこの",
+    {
+     "text": "教会",
+     "kind": "readable",
+     "rt": "きょうかい"
+    },
+    "で",
+    {
+     "text": "結婚式",
+     "kind": "new",
+     "rt": "けっこんしき"
+    },
+    "を",
+    {
+     "text": "挙",
+     "kind": "ruby",
+     "rt": "あ"
+    },
+    "げ",
+    "た。"
+   ]
+  }
+ ]
+}

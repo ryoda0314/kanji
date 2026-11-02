@@ -1,0 +1,10 @@
+/* 読める語が増える数：アクセントの色の大きな数字に、短い言葉を添えるだけ。
+   韓国語の数え方（12개）は数字に続けて書くので、数字のあとは詰め、前の言葉とのあいだだけ空ける。 */
+.gain { margin: 0; display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 1px; }
+.gain > .text:first-child { margin-right: 5px; }
+.num { font-size: 30px; font-weight: 600; line-height: 1.2; color: var(--accent); font-variant-numeric: tabular-nums; }
+.text { font-size: 15px; font-weight: 500; color: var(--ink-2); }
+.after { padding: 14px 16px; background: var(--tint); border-radius: var(--radius); animation: gain-in 0.45s cubic-bezier(0.2, 0.8, 0.2, 1) both; }
+.after .num { font-size: 44px; line-height: 1.1; }
+.after .text { color: var(--accent); font-weight: 600; }
+@keyframes gain-in { from { opacity: 0; transform: translateY(8px); } }

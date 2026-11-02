@@ -1,0 +1,37 @@
+.top { display: flex; align-items: center; gap: 14px; }
+.names { flex: 1; min-width: 0; display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 14px; }
+.big { margin: 0; font-size: 38px; font-weight: 500; line-height: 1.35; overflow-wrap: anywhere; }
+.bigHanja { font-size: 26px; line-height: 1.4; color: var(--ink-2); }
+.gloss { margin: -6px 0 0; font-size: 15px; line-height: 1.7; color: var(--ink-2); overflow-wrap: anywhere; }
+.section { display: flex; flex-direction: column; gap: 8px; }
+.since { margin: 0; font-size: 13px; font-weight: 600; color: var(--accent); }
+
+/* 打ってあつめる */
+.typeBox { display: flex; flex-direction: column; gap: 8px; padding: 16px; background: var(--surface); border-radius: var(--radius); }
+.typeRow { display: flex; gap: 8px; }
+.typeRow :global(.btn) { flex-shrink: 0; }
+.typeInput {
+  flex: 1; min-width: 0; min-height: 52px; padding: 0 14px; border: 1.5px solid var(--ink); border-radius: var(--radius);
+  font-size: 20px; background: var(--paper);
+}
+
+/* 外す：静かな一押し目、はっきりした二押し目。 */
+.dangerRow { display: flex; justify-content: center; padding-top: 4px; }
+.confirm { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 8px 12px; text-align: center; }
+.confirm > p { flex-basis: 100%; }
+.quietDanger { min-height: var(--tap); padding: 0 12px; border: 0; background: none; color: var(--muted); font: inherit; font-size: 13px; text-decoration: underline; cursor: pointer; }
+.danger { min-height: 40px; padding: 0 16px; border: 1px solid var(--danger); border-radius: 8px; background: var(--paper); color: var(--danger); font: inherit; font-size: 14px; cursor: pointer; }
+
+/* 答え合わせ：あつめると、伏せていた漢字が開く。字のふだんの音とこの語での音の違いも添える。 */
+.reveal { animation: hanja-open 0.7s cubic-bezier(0.2, 0.8, 0.2, 1) both; }
+@keyframes hanja-open { from { opacity: 0; transform: translateY(8px) scale(0.94); } }
+.notes { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 4px; font-size: 14px; line-height: 1.7; color: var(--again); font-weight: 500; }
+
+/* 同じ漢字の韓国語の語・JLPT の級 */
+.facts { margin: -2px 0 0; display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 14px; font-size: 14px; color: var(--muted); }
+.facts strong { color: var(--ink); font-weight: 600; }
+.level { font-size: 11px; font-weight: 600; padding: 1px 8px; border-radius: 999px; background: var(--surface); color: var(--ink-2); }
+
+/* 同じ漢字・同じ意味の韓国語の語から（학생 → 学生）。 */
+.koWord { font-size: 24px; font-weight: 600; line-height: 1.35; color: var(--ink); }
+.koArrow { margin: 0 2px 0 8px; font-weight: 400; color: var(--faint); }

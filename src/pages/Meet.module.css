@@ -1,0 +1,47 @@
+/* 文で出会う：ことのあめ の雨と同じく、文は上から降ってきて積もり、横に雨粒の印が着地する。 */
+.wrap { display: flex; flex-direction: column; gap: 18px; }
+.toolbar { display: flex; flex-direction: column; gap: 8px; }
+.toggles { display: flex; flex-wrap: wrap; gap: 4px 16px; }
+.toggle { display: inline-flex; align-items: center; gap: 6px; min-height: 36px; font-size: 13px; color: var(--ink-2); cursor: pointer; }
+.toggle input { width: 18px; height: 18px; accent-color: var(--accent); }
+
+.list { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
+.item {
+  display: flex; align-items: center; gap: 12px; padding: 14px 0; border-bottom: 1px solid var(--line);
+  animation: rain-fall 0.75s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+@keyframes rain-fall {
+  from { opacity: 0; transform: translateY(-44px); }
+  55% { opacity: 1; }
+  to { opacity: 1; transform: none; }
+}
+.drop {
+  flex-shrink: 0; align-self: stretch; width: 3px; margin-block: 6px; border-radius: 2px;
+  background: var(--line-2); transform-origin: top; animation: drop-land 0.45s ease-out both;
+}
+@keyframes drop-land { from { transform: scaleY(0); } to { transform: scaleY(1); } }
+.itemMain { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+.gloss { font-size: 14px; color: var(--muted); line-height: 1.6; }
+
+/* この雨で出会った語 */
+.met { display: flex; flex-direction: column; gap: 10px; padding-top: 4px; }
+.group { display: flex; flex-direction: column; gap: 6px; }
+.groupName { font-size: 12px; font-weight: 600; letter-spacing: 0.02em; color: var(--muted); }
+.groupName.owned { color: var(--again); }
+.groupName.readable { color: var(--accent); }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip {
+  min-height: 40px; padding: 0 14px; display: inline-flex; align-items: baseline; gap: 6px;
+  border: 1px solid var(--line-2); border-radius: 999px; background: var(--paper); color: var(--ink);
+  font: inherit; font-size: 16px; cursor: pointer;
+}
+.chip.owned { border-color: var(--again); background: var(--again-tint); }
+.chip.readable { border-color: var(--accent); background: var(--tint); }
+/* まだ集めていない語の札：アクセントの破線と、？？ もアクセントの色で。 */
+.chip.new { border-color: var(--accent); border-style: dashed; }
+.chip .chipHanja [aria-hidden="true"] { color: var(--accent); font-weight: 600; }
+.chipHanja { font-size: 14px; color: var(--ink-2); }
+
+@media (prefers-reduced-motion: reduce) {
+  .item, .drop { animation: none; }
+}
