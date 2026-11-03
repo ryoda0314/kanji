@@ -8,3 +8,6 @@
 
 /* 복습の向き（읽기・쓰기）。カードの上に。 */
 .modes { margin-bottom: 16px; }
+/* 한글 숨기기（말하기 のときだけ。文で出会う の「번역 숨기기」と同じ形）。 */
+.toggle { display: inline-flex; align-items: center; gap: 6px; min-height: 36px; margin: -8px 0 8px; font-size: 13px; color: var(--ink-2); cursor: pointer; }
+.toggle input { width: 18px; height: 18px; accent-color: var(--accent); }

@@ -78,16 +78,20 @@ type Phase = "ask" | "answer" | "read";
  * 漢字だけ見せて、字の読みをつなげてかなで読むカード。
  * new：まだ集めていない語。読めたら（打てたら）集まり、答えを見ずに読めたら「読めた」から始まる。
  * review：集めた語のふりかえり。答えを見ずに読めたら覚え具合が進み、答えを見たらあすまた出てくる。
+ * hideKorean：問いのあいだ 한글（韓国語の語と、字の下の韓国語の音）を出さず、漢字だけで言う（복습 の 한글 숨기기）。
+ * 한글 を見ると 소리 짝 から音が出せてしまうので、字そのものを覚えたい人のために。答えを見たあとは、いつもどおり出す。
  */
 export function ReadCard({
   word,
   mode,
   focus,
+  hideKorean = false,
   onNext,
 }: {
   word: WordData;
   mode: "new" | "review";
   focus: boolean;
+  hideKorean?: boolean;
   onNext: () => void;
 }) {
   const { rate } = usePrefs();
@@ -165,9 +169,9 @@ export function ReadCard({
     <section className={styles.wrap} aria-live="polite">
       {phase === "ask" ? (
         <>
-          <p className={app.lead}>{mode === "review" ? t.review.lead : t.read.lead}</p>
+          <p className={app.lead}>{mode === "review" ? (hideKorean ? t.review.leadKanjiOnly : t.review.lead) : t.read.lead}</p>
           <div className={styles.card}>
-            {korean ? (
+            {korean && !hideKorean ? (
               <p className={`${styles.korean} t-ko`} lang="ko">
                 {korean}
               </p>
@@ -199,7 +203,7 @@ export function ReadCard({
                       <span className={`hanja ${styles.glyphChar}`} lang="ja">
                         {p.text}
                       </span>
-                      {getCharData(splitKanji(p.text)[0] ?? p.text)?.sounds[0] ? (
+                      {!hideKorean && getCharData(splitKanji(p.text)[0] ?? p.text)?.sounds[0] ? (
                         <span className={`t-ko ${styles.eum}`} lang="ko">
                           {getCharData(splitKanji(p.text)[0] ?? p.text)?.sounds[0]?.eum}
                         </span>
@@ -219,7 +223,7 @@ export function ReadCard({
             </ol>
             <p className={app.note}>{t.read.tapHint}</p>
           </div>
-          {diff ? <DiffNote note={diff} /> : null}
+          {diff && !hideKorean ? <DiffNote note={diff} /> : null}
         </>
       ) : (
         <>
@@ -268,6 +272,8 @@ export function ReadCard({
               {glossText(word)}
             </p>
           ) : null}
+          {/* 한글 を隠して問うたときは、한국어와 다른 점 は答えのあとに（問いのあいだに出すと、韓国語の語が分かってしまう）。 */}
+          {diff && hideKorean ? <DiffNote note={diff} /> : null}
           <Roots word={word} notes={before ? rootNotes(before) : undefined} grow={phase === "read"} />
           {notes.length > 0 ? (
             <ul className={styles.notes}>

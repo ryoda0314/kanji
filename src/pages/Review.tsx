@@ -30,6 +30,8 @@ export function Review({ words, onBack }: { words: CollectedWord[]; onBack: () =
   const [openKey, setOpenKey] = useState<string | null>(null);
   // 복습の向き：읽기（字を見て読みを打つ）・쓰기（言葉を聞いて字の札を並べる）。
   const [write, setWrite] = usePref("reviewWrite", false);
+  // 말하기 で、한글（韓国語の語と字の下の音）を隠して漢字だけ見せるか。
+  const [hideKorean, setHideKorean] = usePref("reviewHideKorean", false);
   const byKey = useMemo(() => new Map(words.map((w) => [wordKey(w), w])), [words]);
   // 途中で外した語は飛ばす。
   const rest = round.keys.filter((k) => !done.has(k) && byKey.has(k));
@@ -60,6 +62,12 @@ export function Review({ words, onBack }: { words: CollectedWord[]; onBack: () =
                 </button>
               ))}
             </div>
+            {write ? null : (
+              <label className={styles.toggle}>
+                <input type="checkbox" checked={hideKorean} onChange={(e) => setHideKorean(e.target.checked)} />
+                {t.review.hideKorean}
+              </label>
+            )}
             {write ? (
               <WriteCard
                 key={`w${wordKey(current)}`}
@@ -73,6 +81,7 @@ export function Review({ words, onBack }: { words: CollectedWord[]; onBack: () =
                 word={current}
                 mode="review"
                 focus
+                hideKorean={hideKorean}
                 onNext={() => setDone((d) => new Set(d).add(wordKey(current)))}
               />
             )}
