@@ -807,13 +807,21 @@ function Tip({ fr }: { fr: number }) {
     <AbsoluteFill style={{ padding: "0 100px", justifyContent: "center", gap: 44, wordBreak: "keep-all", ...out }}>
       <span style={{ alignSelf: "flex-start", padding: "8px 22px", borderRadius: 999, border: `2px solid ${C.ink}`, fontSize: 30, fontWeight: 700, ...fall(fr, S.tip, 12, 12) }}>메뉴에서 찾을 수 없을 때는</span>
       <span style={{ fontSize: 54, fontWeight: 700, lineHeight: 1.5, ...fall(fr, S.tip + 8, 14, 14) }}>
-        링크를 복사해서 Safari(Android는 Chrome) 주소창에 붙여 넣어도 열려요.
+        링크를 복사해서
+        <br />
+        Safari나 Chrome 주소창에
+        <br />
+        붙여 넣어도 열려요.
       </span>
       <div style={{ display: "flex", alignItems: "center", gap: 22, fontSize: 36, color: C.ink2, ...rise(fr, S.tip + 30, 12, 14) }}>
         <span style={{ padding: "16px 26px", borderRadius: 16, background: C.surface }}>링크 복사</span>
         <Icon name="arrow" size={40} />
         <span style={{ padding: "16px 26px", borderRadius: 16, background: C.surface }}>주소창에 붙여 넣기</span>
       </div>
+      {/* 作者は日本人で、確かめたのは日本語の iPhone だけ。韓国語のメニューの言葉と Android は、実機と違うことがある。 */}
+      <span style={{ paddingTop: 30, borderTop: `1.5px solid ${C.line2}`, fontSize: 30, fontWeight: 500, color: C.muted, lineHeight: 1.6, ...rise(fr, S.tip + 50, 10, 14) }}>
+        ※ 만든 사람이 일본인이라, 아이폰(일본어 화면)으로만 확인했어요. 한국어 메뉴 이름이나 안드로이드 화면은 조금 다를 수 있어요.
+      </span>
     </AbsoluteFill>
   );
 }

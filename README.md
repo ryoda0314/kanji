@@ -90,7 +90,7 @@ npm run build:sentences  # 例文（public/data/sentences.json）
 - `.env` に ことのあめ の Supabase を入れた（アカウント・使われ方の数・みんなの雨）。表と関数はまだ当てていないので、ことのあめ のリポジトリで
   `supabase/usage.sql`・`falls.sql`・`records.sql`（名前は `kh_`）を当てる（`node --env-file=.env.local scripts/migrate.mjs ../hanjaeo/supabase/records.sql`
   など）。当てるまでは、ログインはできても記録を合わせられず、みんなの雨も降らない。
-- 公開したら、ことのあめ の `src/lib/sisters.ts` の `kotonohashi` の `url` に公開先を書く（それまで つなぐ は開発中のこのコンピューターからだけ）。
+- 公開先は https://kanji-delta.vercel.app/（Vercel のプロジェクト名は kanji）。ことのあめ の `src/lib/sisters.ts` の `kotonohashi` の `url` に書いてある（書くまでは つなぐ が「연결할 수 없어요」になっていた）。Vercel の環境変数にも `VITE_SITE_URL` を入れる（無いと使われ方の数が送られず、リンクのカードの og:url も空）。
 - 書き足した例文（`scripts/sentences/hashi-ab.json`）は下書き。韓国語を話す人に訳の自然さを、日本語を話す人に文の自然さを見てもらう。
 - 「한국어와 다른 점」の補足（`scripts/same-hanjaeo.json`）と韓国語の意味の直しも、AI が書いて一件ずつ確かめたもの。韓国語を話す人に、
   補足の言い方と、ちがいの見立て（細かすぎないか・足りない語はないか）を見てもらう。
